@@ -1,0 +1,995 @@
+{
+  "freelancers": [
+    {
+      "id": "8ae2",
+      "freelancername": "Vamshi",
+      "username": "Vamshi@2k",
+      "phone": "7995541707",
+      "email": "Vamshianimela@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-18"
+    },
+    {
+      "id": "9bd3",
+      "freelancername": "Amit",
+      "username": "Amit@123",
+      "phone": "9001234567",
+      "email": "amit.kumar@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-20"
+    },
+    {
+      "id": "10ce",
+      "freelancername": "Sanya",
+      "username": "Sanya@2024",
+      "phone": "8882345678",
+      "email": "sanya.singh@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-25"
+    },
+    {
+      "id": "11df",
+      "freelancername": "Ravi",
+      "username": "Ravi@work",
+      "phone": "9976543210",
+      "email": "ravi.sharma@gmail.com",
+      "plans": [
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-30"
+    },
+    {
+      "id": "12eg",
+      "freelancername": "Priya",
+      "username": "Priya@99",
+      "phone": "9456781234",
+      "email": "priya.mittal@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-05"
+    },
+    {
+      "id": "13fh",
+      "freelancername": "Raj",
+      "username": "Raj@456",
+      "phone": "9988776655",
+      "email": "raj.patel@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-10-10"
+    },
+    {
+      "id": "14gi",
+      "freelancername": "Ananya",
+      "username": "Ananya@work",
+      "phone": "9876543210",
+      "email": "ananya.ravi@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-15"
+    },
+    {
+      "id": "15hj",
+      "freelancername": "Siddharth",
+      "username": "Siddharth@789",
+      "phone": "9123456789",
+      "email": "siddharth.bose@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-10-20"
+    },
+    {
+      "id": "16ik",
+      "freelancername": "Neha",
+      "username": "Neha@2024",
+      "phone": "9234567890",
+      "email": "neha.agarwal@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-25"
+    },
+    {
+      "id": "17jl",
+      "freelancername": "Karan",
+      "username": "Karan@100",
+      "phone": "9345678901",
+      "email": "karan.singh@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-11-01"
+    },
+    {
+      "id": "18km",
+      "freelancername": "Maya",
+      "username": "Maya@abc",
+      "phone": "9456789012",
+      "email": "maya.jain@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-11-05"
+    },
+    {
+      "id": "11e8",
+      "freelancername": "Demo`",
+      "username": "Demo_User",
+      "phone": "7995541707",
+      "email": "Demo@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        },
+        {
+          "value": "plan4",
+          "label": "Plan 4"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-13"
+    }
+  ],
+  "studios": [
+    {
+      "id": "8ae2",
+      "studioname": "Vamshi Photo Studio",
+      "username": "Vamshi@2k",
+      "phone": "7995541707",
+      "email": "Vamshianimela@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-18"
+    },
+    {
+      "id": "9bd3",
+      "studioname": "Amit Photography Studio",
+      "username": "Amit@123",
+      "phone": "9001234567",
+      "email": "amit.kumar@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-20"
+    },
+    {
+      "id": "10ce",
+      "studioname": "Sanya's Photo Studio",
+      "username": "Sanya@2024",
+      "phone": "8882345678",
+      "email": "sanya.singh@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-25"
+    },
+    {
+      "id": "11df",
+      "studioname": "Ravi's Photography Corner",
+      "username": "Ravi@work",
+      "phone": "9976543210",
+      "email": "ravi.sharma@gmail.com",
+      "plans": [
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-30"
+    },
+    {
+      "id": "12eg",
+      "studioname": "Priya's Studio",
+      "username": "Priya@99",
+      "phone": "9456781234",
+      "email": "priya.mittal@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-05"
+    },
+    {
+      "id": "13fh",
+      "studioname": "Raj's Photography Studio",
+      "username": "Raj@456",
+      "phone": "9988776655",
+      "email": "raj.patel@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-10-10"
+    },
+    {
+      "id": "14gi",
+      "studioname": "Ananya's Photo Studio",
+      "username": "Ananya@work",
+      "phone": "9876543210",
+      "email": "ananya.ravi@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-15"
+    },
+    {
+      "id": "15hj",
+      "studioname": "Siddharth's Photography Studio",
+      "username": "Siddharth@789",
+      "phone": "9123456789",
+      "email": "siddharth.bose@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-10-20"
+    },
+    {
+      "id": "16ik",
+      "studioname": "Neha's Photo Studio",
+      "username": "Neha@2024",
+      "phone": "9234567890",
+      "email": "neha.agarwal@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-25"
+    },
+    {
+      "id": "17jl",
+      "studioname": "Karan's Photography Studio",
+      "username": "Karan@100",
+      "phone": "9345678901",
+      "email": "karan.singh@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-11-01"
+    },
+    {
+      "id": "18km",
+      "studioname": "Maya's Photo Studio",
+      "username": "Maya@abc",
+      "phone": "9456789012",
+      "email": "maya.jain@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-11-05"
+    },
+    {
+      "id": "11e8",
+      "studioname": "Demo's Photography Studio",
+      "username": "Demo_User",
+      "phone": "7995541707",
+      "email": "Demo@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        },
+        {
+          "value": "plan4",
+          "label": "Plan 4"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-13"
+    },
+    {
+      "id": "a6cb",
+      "studioname": "Demo_Studio",
+      "username": "Vamshi@2k",
+      "phone": "7995541707",
+      "email": "Vamshianimela@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        },
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan4",
+          "label": "Plan 4"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-19"
+    }
+  ],
+  "themeparks": [
+    {
+      "id": "8ae2",
+      "themeparkname": "Ramoji Film City",
+      "username": "Vamshi@2k",
+      "phone": "7995541707",
+      "email": "Vamshianimela@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-18"
+    },
+    {
+      "id": "9bd3",
+      "themeparkname": "Wonderla",
+      "username": "Amit@123",
+      "phone": "9001234567",
+      "email": "amit.kumar@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-20"
+    },
+    {
+      "id": "10ce",
+      "themeparkname": "Necklace Road",
+      "username": "Sanya@2024",
+      "phone": "8882345678",
+      "email": "sanya.singh@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-25"
+    },
+    {
+      "id": "11df",
+      "themeparkname": "Shilparamam",
+      "username": "Ravi@work",
+      "phone": "9976543210",
+      "email": "ravi.sharma@gmail.com",
+      "plans": [
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-30"
+    },
+    {
+      "id": "12eg",
+      "themeparkname": "Jalavihar",
+      "username": "Priya@99",
+      "phone": "9456781234",
+      "email": "priya.mittal@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-05"
+    },
+    {
+      "id": "13fh",
+      "themeparkname": "Hussain Sagar",
+      "username": "Raj@456",
+      "phone": "9988776655",
+      "email": "raj.patel@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-10-10"
+    },
+    {
+      "id": "14gi",
+      "themeparkname": "Lumbini Park",
+      "username": "Ananya@work",
+      "phone": "9876543210",
+      "email": "ananya.ravi@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-15"
+    },
+    {
+      "id": "15hj",
+      "themeparkname": "Snow World",
+      "username": "Siddharth@789",
+      "phone": "9123456789",
+      "email": "siddharth.bose@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-10-20"
+    },
+    {
+      "id": "16ik",
+      "themeparkname": "KBR Park",
+      "username": "Neha@2024",
+      "phone": "9234567890",
+      "email": "neha.agarwal@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-10-25"
+    },
+    {
+      "id": "17jl",
+      "themeparkname": "Botanical Garden",
+      "username": "Karan@100",
+      "phone": "9345678901",
+      "email": "karan.singh@gmail.com",
+      "plans": [
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-11-01"
+    },
+    {
+      "id": "18km",
+      "themeparkname": "Ocean Park",
+      "username": "Maya@abc",
+      "phone": "9456789012",
+      "email": "maya.jain@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-11-05"
+    },
+    {
+      "id": "11e8",
+      "themeparkname": "NTR Gardens",
+      "username": "Demo_User",
+      "phone": "7995541707",
+      "email": "Demo@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        },
+        {
+          "value": "plan1",
+          "label": "Plan 1"
+        },
+        {
+          "value": "plan3",
+          "label": "Plan 3"
+        },
+        {
+          "value": "plan4",
+          "label": "Plan 4"
+        }
+      ],
+      "status": 1,
+      "dor": "2024-09-13"
+    },
+    {
+      "id": "aa82",
+      "themeparkname": "Garden Garden",
+      "username": "Vamshi@2k",
+      "phone": "7995541707",
+      "email": "Vamshianimela@gmail.com",
+      "plans": [
+        {
+          "value": "plan2",
+          "label": "Plan 2"
+        }
+      ],
+      "status": 0,
+      "dor": "2024-09-19"
+    }
+  ],
+  "userslist": [
+    {
+      "id": 1,
+      "dateOfRegistration": "2024-01-15",
+      "name": "Aarav Patel",
+      "phone": "+91-9876543210",
+      "email": "aarav.patel@example.com"
+    },
+    {
+      "id": 2,
+      "dateOfRegistration": "2024-02-20",
+      "name": "Aisha Sharma",
+      "phone": "+91-8765432109",
+      "email": "aisha.sharma@example.com"
+    },
+    {
+      "id": 3,
+      "dateOfRegistration": "2024-03-10",
+      "name": "Arjun Singh",
+      "phone": "+91-9876543201",
+      "email": "arjun.singh@example.com"
+    },
+    {
+      "id": 4,
+      "dateOfRegistration": "2024-04-05",
+      "name": "Diya Gupta",
+      "phone": "+91-8765432098",
+      "email": "diya.gupta@example.com"
+    },
+    {
+      "id": 5,
+      "dateOfRegistration": "2024-05-25",
+      "name": "Vihaan Reddy",
+      "phone": "+91-9876543212",
+      "email": "vihaan.reddy@example.com"
+    },
+    {
+      "id": 6,
+      "dateOfRegistration": "2024-06-30",
+      "name": "Isha Mehta",
+      "phone": "+91-8765432108",
+      "email": "isha.mehta@example.com"
+    },
+    {
+      "id": 7,
+      "dateOfRegistration": "2024-07-15",
+      "name": "Kabir Khan",
+      "phone": "+91-9876543213",
+      "email": "kabir.khan@example.com"
+    },
+    {
+      "id": 8,
+      "dateOfRegistration": "2024-08-20",
+      "name": "Saanvi Joshi",
+      "phone": "+91-8765432107",
+      "email": "saanvi.joshi@example.com"
+    },
+    {
+      "id": 9,
+      "dateOfRegistration": "2024-09-10",
+      "name": "Reyansh Agarwal",
+      "phone": "+91-9876543214",
+      "email": "reyansh.agarwal@example.com"
+    },
+    {
+      "id": 10,
+      "dateOfRegistration": "2024-10-05",
+      "name": "Maya Nair",
+      "phone": "+91-8765432106",
+      "email": "maya.nair@example.com"
+    },
+    {
+      "id": 11,
+      "dateOfRegistration": "2024-11-25",
+      "name": "Aryan Sharma",
+      "phone": "+91-9876543215",
+      "email": "aryan.sharma@example.com"
+    },
+    {
+      "id": 12,
+      "dateOfRegistration": "2024-12-10",
+      "name": "Kavya Patel",
+      "phone": "+91-8765432105",
+      "email": "kavya.patel@example.com"
+    },
+    {
+      "id": 13,
+      "dateOfRegistration": "2024-01-30",
+      "name": "Aditya Rao",
+      "phone": "+91-9876543216",
+      "email": "aditya.rao@example.com"
+    },
+    {
+      "id": 14,
+      "dateOfRegistration": "2024-02-25",
+      "name": "Nisha Mehta",
+      "phone": "+91-8765432104",
+      "email": "nisha.mehta@example.com"
+    },
+    {
+      "id": 15,
+      "dateOfRegistration": "2024-03-15",
+      "name": "Vivaan Joshi",
+      "phone": "+91-9876543217",
+      "email": "vivaan.joshi@example.com"
+    },
+    {
+      "id": 16,
+      "dateOfRegistration": "2024-04-10",
+      "name": "Ananya Kapoor",
+      "phone": "+91-8765432103",
+      "email": "ananya.kapoor@example.com"
+    },
+    {
+      "id": 17,
+      "dateOfRegistration": "2024-05-05",
+      "name": "Siddharth Kumar",
+      "phone": "+91-9876543218",
+      "email": "siddharth.kumar@example.com"
+    },
+    {
+      "id": 18,
+      "dateOfRegistration": "2024-06-20",
+      "name": "Pooja Singh",
+      "phone": "+91-8765432102",
+      "email": "pooja.singh@example.com"
+    },
+    {
+      "id": 19,
+      "dateOfRegistration": "2024-07-10",
+      "name": "Rohan Gupta",
+      "phone": "+91-9876543219",
+      "email": "rohan.gupta@example.com"
+    },
+    {
+      "id": 20,
+      "dateOfRegistration": "2024-08-05",
+      "name": "Kriti Sharma",
+      "phone": "+91-8765432101",
+      "email": "kriti.sharma@example.com"
+    },
+    {
+      "id": 21,
+      "dateOfRegistration": "2024-09-30",
+      "name": "Aria Reddy",
+      "phone": "+91-9876543220",
+      "email": "aria.reddy@example.com"
+    },
+    {
+      "id": 22,
+      "dateOfRegistration": "2024-10-25",
+      "name": "Rajesh Nair",
+      "phone": "+91-8765432100",
+      "email": "rajesh.nair@example.com"
+    },
+    {
+      "id": 23,
+      "dateOfRegistration": "2024-11-15",
+      "name": "Meera Agarwal",
+      "phone": "+91-9876543221",
+      "email": "meera.agarwal@example.com"
+    },
+    {
+      "id": 24,
+      "dateOfRegistration": "2024-12-05",
+      "name": "Amit Patel",
+      "phone": "+91-8765432099",
+      "email": "amit.patel@example.com"
+    },
+    {
+      "id": 25,
+      "dateOfRegistration": "2024-01-20",
+      "name": "Naina Joshi",
+      "phone": "+91-9876543222",
+      "email": "naina.joshi@example.com"
+    },
+    {
+      "id": 26,
+      "dateOfRegistration": "2024-02-15",
+      "name": "Gaurav Singh",
+      "phone": "+91-8765432098",
+      "email": "gaurav.singh@example.com"
+    },
+    {
+      "id": 27,
+      "dateOfRegistration": "2024-03-20",
+      "name": "Ritika Kapoor",
+      "phone": "+91-9876543223",
+      "email": "ritika.kapoor@example.com"
+    },
+    {
+      "id": 28,
+      "dateOfRegistration": "2024-04-25",
+      "name": "Aakash Kumar",
+      "phone": "+91-8765432097",
+      "email": "aakash.kumar@example.com"
+    },
+    {
+      "id": 29,
+      "dateOfRegistration": "2024-05-15",
+      "name": "Sneha Rao",
+      "phone": "+91-9876543224",
+      "email": "sneha.rao@example.com"
+    },
+    {
+      "id": 30,
+      "dateOfRegistration": "2024-06-05",
+      "name": "Tarun Gupta",
+      "phone": "+91-8765432096",
+      "email": "tarun.gupta@example.com"
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "groupName": "Photography",
+      "status": 1,
+      "plans": [
+        {
+          "planId": 1,
+          "serviceName": "Wedding Photography",
+          "price": 600
+        },
+        {
+          "planId": 2,
+          "serviceName": "Portrait Session",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "groupName": "Videography",
+      "status": 1,
+      "plans": [
+        {
+          "planId": 3,
+          "serviceName": "Wedding Videography",
+          "price": 500
+        },
+        {
+          "planId": 4,
+          "serviceName": "Corporate Video",
+          "price": 400
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "groupName": "Album",
+      "status": 0,
+      "plans": [
+        {
+          "planId": 5,
+          "serviceName": "Standard Album",
+          "price": 200
+        },
+        {
+          "planId": 6,
+          "serviceName": "Deluxe Album",
+          "price": 400
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "groupName": "Package",
+      "status": 0,
+      "plans": [
+        {
+          "planId": 7,
+          "serviceName": "Full Day Package",
+          "price": 1000
+        },
+        {
+          "planId": 8,
+          "serviceName": "Half Day Package",
+          "price": 600
+        }
+      ]
+    },
+    {
+      "groupName": "Hey - Update",
+      "status": 0,
+      "id": "ce17"
+    },
+    {
+      "groupName": "VASUDEV - nO",
+      "status": 1,
+      "id": "322c"
+    },
+    {
+      "id": "9f81",
+      "groupName": "askdsd",
+      "status": 1
+    }
+  ]
+}
