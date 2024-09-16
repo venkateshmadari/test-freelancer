@@ -6,7 +6,10 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import {
     Package2, Users, Bell, LayoutDashboard, Menu, Search, CircleUser,
     ChevronDown, ChevronUp,
-    Coins
+    Coins,
+    NotepadText,
+    PersonStanding,
+    Workflow
 } from "lucide-react";
 
 import {
@@ -21,9 +24,6 @@ import { motion } from 'framer-motion';
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
-
-
-
 export const description =
     "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
 
@@ -32,23 +32,34 @@ export const iframeHeight = "800px";
 export const containerClassName = "w-full h-full";
 
 export default function SideBar({ children }: { children: React.ReactNode }) {
-    const { setTheme } = useTheme()
-    const [isVendorOpen, setIsVendorOpen] = useState(false);
+    const { setTheme } = useTheme();
+    const [openDropdowns, setOpenDropdowns] = useState<{ [key: string]: boolean }>({});
 
     const links = [
         { title: "Dashboard", icon: LayoutDashboard, variant: "default", href: '/' },
+        { title: "Pricing", icon: Coins, variant: "ghost", href: '/pricing' },
         {
-            title: "Vendors", icon: Users, variant: "ghost", href: '#', hasDropdown: true, dropdownLinks: [
-                { title: "Freelancer", href: '/vendors/freelancers' },
-                { title: "Studio", href: '/vendors/studio' },
-                { title: "Theme Parks", href: '/vendors/themepark' }
+            title: "Leads", icon: NotepadText, variant: "ghost", href: '#', id: 'leads', hasDropdown: true, dropdownLinks: [
+                { title: "Request Forms", href: '/leads/requestforms' },
+                { title: "Contact Forms", href: '/leads/contactforms' },
             ]
         },
-        { title: "UsersList", icon: Users, variant: "ghost", href: '/userslist' },
-        { title: "Pricing", icon: Coins, variant: "ghost", href: '/pricing' },
+        {
+            title: "Work", icon: Workflow, variant: "ghost", href: '#', id: 'work', hasDropdown: true, dropdownLinks: [
+                { title: "Work Image", href: '/work/workImages' },
+                { title: "Contact Forms", href: '/work/albums' },
+            ]
+        },
     ];
 
     const pathName = usePathname();
+
+    const toggleDropdown = (id: string) => {
+        setOpenDropdowns(prevState => ({
+            ...prevState,
+            [id]: !prevState[id]
+        }));
+    };
 
     return (
         <div className="flex h-screen overflow-hidden">
@@ -66,7 +77,7 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                 </div>
                 <div className="flex-1 overflow-y-auto">
                     <nav className="px-2 text-sm font-medium lg:px-4">
-                        {links.map((item: any, index: number) => {
+                        {links.map((item, index) => {
                             const isActive = item.href === pathName;
                             return (
                                 <div key={index} className="relative mt-3">
@@ -79,27 +90,27 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                             "flex items-center justify-start gap-3 w-full"
                                         )}
                                         onClick={() => {
-                                            if (item.title === "Vendors") {
-                                                setIsVendorOpen(!isVendorOpen);
+                                            if (item.hasDropdown) {
+                                                toggleDropdown(item.id);
                                             }
                                         }}
                                     >
                                         <item.icon className="h-4 w-4" />
                                         {item?.title}
                                         {item.hasDropdown && (
-                                            isVendorOpen ?
+                                            openDropdowns[item.id] ?
                                                 <ChevronUp className="ml-auto h-4 w-4" /> :
                                                 <ChevronDown className="ml-auto h-4 w-4" />
                                         )}
                                     </Link>
-                                    {item.hasDropdown && isVendorOpen && item.dropdownLinks && (
+                                    {item.hasDropdown && openDropdowns[item.id] && item.dropdownLinks && (
                                         <motion.div
                                             initial={{ opacity: 0, height: 0 }}
                                             animate={{ opacity: 1, height: 'auto' }}
                                             exit={{ opacity: 0, height: 0 }}
                                             className="pl-4 mt-2 space-y-2"
                                         >
-                                            {item.dropdownLinks.map((dropdownItem: any, dropdownIndex: number) => (
+                                            {item.dropdownLinks.map((dropdownItem, dropdownIndex) => (
                                                 <Link
                                                     key={dropdownIndex}
                                                     href={dropdownItem.href}
@@ -146,7 +157,7 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                     <Package2 className="h-6 w-6" />
                                     <span className="sr-only">Acme Inc</span>
                                 </Link>
-                                {links.map((item: any, index: number) => {
+                                {links.map((item, index) => {
                                     const isActive = item.href === pathName;
                                     return (
                                         <div key={index} className="relative">
@@ -159,27 +170,27 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                                     "flex items-center justify-start gap-3 w-full mb-5"
                                                 )}
                                                 onClick={() => {
-                                                    if (item.title === "Vendors") {
-                                                        setIsVendorOpen(!isVendorOpen);
+                                                    if (item.hasDropdown) {
+                                                        toggleDropdown(item.id);
                                                     }
                                                 }}
                                             >
                                                 <item.icon className="h-5 w-5" />
                                                 {item?.title}
                                                 {item.hasDropdown && (
-                                                    isVendorOpen ?
+                                                    openDropdowns[item.id] ?
                                                         <ChevronUp className="ml-auto h-5 w-5" /> :
                                                         <ChevronDown className="ml-auto h-5 w-5" />
                                                 )}
                                             </Link>
-                                            {item.hasDropdown && isVendorOpen && item.dropdownLinks && (
+                                            {item.hasDropdown && openDropdowns[item.id] && item.dropdownLinks && (
                                                 <motion.div
                                                     initial={{ opacity: 0, height: 0 }}
                                                     animate={{ opacity: 1, height: 'auto' }}
                                                     exit={{ opacity: 0, height: 0 }}
                                                     className="pl-6 mt-2 space-y-1"
                                                 >
-                                                    {item.dropdownLinks.map((dropdownItem: any, dropdownIndex: number) => (
+                                                    {item.dropdownLinks.map((dropdownItem, dropdownIndex) => (
                                                         <Link
                                                             key={dropdownIndex}
                                                             href={dropdownItem.href}

@@ -7,8 +7,7 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
+        default: "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
         pending: "bg-blue-600 text-white hover:bg-blue-500",
         cancelled: "bg-red-600 text-white hover:bg-red-500",
         secondary: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
@@ -25,8 +24,14 @@ const badgeVariants = cva(
         violetLight: "bg-violet-100 text-violet-800 hover:bg-violet-50",
         indigoLight: "bg-indigo-100 text-indigo-800 hover:bg-indigo-50",
         lightOrange: "bg-orange-100 text-orange-800 hover:bg-orange-200",
-        brightRed: "bg-red-500 text-white hover:bg-red-400", 
-        deepRed: "bg-red-700 text-white hover:bg-red-600",   
+        brightRed: "bg-red-500 text-white hover:bg-red-400",
+        deepRed: "bg-red-700 text-white hover:bg-red-600",
+        lightTeal: "bg-teal-100 text-teal-800 hover:bg-teal-50",
+        lightCyan: "bg-cyan-100 text-cyan-800 hover:bg-cyan-50",
+        lightMint: "bg-teal-50 text-teal-800 hover:bg-teal-100",
+        lightLavender: "bg-lavender-100 text-lavender-800 hover:bg-lavender-50",
+        lightPeach: "bg-peach-100 text-peach-800 hover:bg-peach-50",
+        lightAmber: "bg-amber-100 text-amber-800 hover:bg-amber-50",
       },
     },
     defaultVariants: {

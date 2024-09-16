@@ -214,7 +214,7 @@ const Pricing: React.FC = () => {
                                         <TableCell className='font-semibold text-heading-dark dark:text-neutral-400'>{(currentPage - 1) * itemsPerPage + currentGroups.indexOf(item) + 1}</TableCell>
                                         <TableCell className='font-semibold text-heading-dark dark:text-neutral-400'>{item.groupName}</TableCell>
                                         <TableCell className='font-semibold text-heading-dark dark:text-neutral-400'>
-                                            <Link  href={`/pricing/plans/${item?.id}`}>
+                                            <Link href={`/pricing/plans/${item?.id}`}>
                                                 <Button variant={'default'}>
                                                     Add Plans
                                                 </Button>
@@ -295,31 +295,35 @@ const Pricing: React.FC = () => {
                             Enter the name and status of the new group.
                         </DialogDescription>
                     </DialogHeader>
-                    <div className='mt-4'>
+                    <div>
                         <Label htmlFor='newGroupName'>Group Name</Label>
                         <Input
                             id='newGroupName'
                             value={newGroupName}
                             onChange={(e) => setNewGroupName(e.target.value)}
                             placeholder='Enter group name'
+                            className='mt-3'
                         />
                     </div>
-                    <div className='mt-4'>
+                    <div>
                         <Label htmlFor='newGroupStatus'>Status</Label>
-                        <Select
-                            value={newGroupStatus.toString()}
-                            onValueChange={(value) => setNewGroupStatus(parseInt(value))}
-                        >
-                            <SelectTrigger>
-                                <SelectValue placeholder="Select status" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="0">Active</SelectItem>
-                                <SelectItem value="1">Inactive</SelectItem>
-                            </SelectContent>
-                        </Select>
+                        <div className='mt-3'>
+                            <Select
+                                value={newGroupStatus.toString()}
+                                onValueChange={(value) => setNewGroupStatus(parseInt(value))}
+                            >
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select status" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="0">Active</SelectItem>
+                                    <SelectItem value="1">Inactive</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+
                     </div>
-                    <DialogFooter>
+                    <DialogFooter className='mt-3'>
                         <Button type='button' onClick={() => setOpenAddModal(false)}>Cancel</Button>
                         <Button type='button' onClick={handleAddGroup}>Add Group</Button>
                     </DialogFooter>
@@ -342,24 +346,28 @@ const Pricing: React.FC = () => {
                             value={editGroupName}
                             onChange={(e) => setEditGroupName(e.target.value)}
                             placeholder='Enter group name'
+                            className='mt-3'
                         />
                     </div>
                     <div className='mt-4'>
                         <Label htmlFor='editGroupStatus'>Status</Label>
-                        <Select
-                            value={editGroupStatus.toString()}
-                            onValueChange={(value) => setEditGroupStatus(parseInt(value))}
-                        >
-                            <SelectTrigger>
-                                <SelectValue placeholder="Select status" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="0">Active</SelectItem>
-                                <SelectItem value="1">Inactive</SelectItem>
-                            </SelectContent>
-                        </Select>
+                        <div className='mt-3'>
+                            <Select
+                                value={editGroupStatus.toString()}
+                                onValueChange={(value) => setEditGroupStatus(parseInt(value))}
+                            >
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select status" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="0">Active</SelectItem>
+                                    <SelectItem value="1">Inactive</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+
                     </div>
-                    <DialogFooter>
+                    <DialogFooter className='mt-3'>
                         <Button type='button' onClick={() => setOpenEditModal(false)}>Cancel</Button>
                         <Button type='button' onClick={handleEditGroup}>Update Group</Button>
                     </DialogFooter>
