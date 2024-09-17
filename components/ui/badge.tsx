@@ -23,7 +23,7 @@ const badgeVariants = cva(
         purpleLight: "bg-purple-100 text-purple-800 hover:bg-purple-50",
         violetLight: "bg-violet-100 text-violet-800 hover:bg-violet-50",
         indigoLight: "bg-indigo-100 text-indigo-800 hover:bg-indigo-50",
-        lightOrange: "bg-orange-100 text-orange-800 hover:bg-orange-200",
+        lightOrange: "bg-orange-100 text-orange-900 hover:bg-orange-300",
         brightRed: "bg-red-500 text-white hover:bg-red-400",
         deepRed: "bg-red-700 text-white hover:bg-red-600",
         lightTeal: "bg-teal-100 text-teal-800 hover:bg-teal-50",

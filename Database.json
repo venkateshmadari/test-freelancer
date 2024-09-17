@@ -1026,7 +1026,7 @@
       "budget": 68000,
       "event_date": "May 2025",
       "contact_mode_status": 1,
-      "status": 3
+      "status": 4
     },
     {
       "id": "req-9",
@@ -1038,7 +1038,7 @@
       "budget": 72000,
       "event_date": "15-06-2025",
       "contact_mode_status": 0,
-      "status": 4
+      "status": 1
     },
     {
       "id": "req-10",
@@ -1355,29 +1355,46 @@
   ],
   "workImages": [
     {
-      "id": "image1",
-      "albumName": "Vacation 2024",
-      "imageUrl": "https://images.unsplash.com/photo-1506748686214e9df14f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZhY2F0aW9ufGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+      "albumName": "Family Photos",
+      "id": "1726568824072"
     },
     {
-      "id": "image2",
-      "albumName": "Vacation 2024",
-      "imageUrl": "https://images.unsplash.com/photo-1506748686214e9df14f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZhY2F0aW9ufGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+      "id": "1726568824087",
+      "albumName": "Family Photos",
+      "imageUrl": "blob:http://localhost:3001/28c16ed3-8dea-47ab-9a21-c5bb903870b7"
     },
     {
-      "id": "image3",
-      "albumName": "Work Projects",
-      "imageUrl": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHdpdGglMjB2b3JrZWQgfGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+      "id": "1726568824130",
+      "albumName": "Family Photos",
+      "imageUrl": "blob:http://localhost:3001/a5032c56-ed24-4bca-a6b4-3c2f05e8caf0"
     },
     {
-      "id": "image4",
-      "albumName": "Work Projects",
-      "imageUrl": "https://images.unsplash.com/photo-1560787121-2d2d0d20c1e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHdpdGglMjB2b3JrZWQgfGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+      "id": "1726568824158",
+      "albumName": "Family Photos",
+      "imageUrl": "blob:http://localhost:3001/b399f194-0ad9-4f9f-a15e-b1a0682a0f02"
     },
     {
-      "id": "image7",
-      "albumName": "Nature Shots",
-      "imageUrl": "https://images.unsplash.com/photo-1473976347745-54653b8b7e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG5hdHVyZSBzaG90c3xlbnwwfHx8MTY2NTI2MTM2Ng&ixlib=rb-1.2.1&q=80&w=1080"
+      "albumName": "Family Photos",
+      "id": "1726574426210"
+    },
+    {
+      "albumName": "Family Photos",
+      "id": "1726575259101"
+    },
+    {
+      "id": "b378",
+      "fileDetails": "{\"id\":\"1726577936666\",\"albumName\":\"Work Projects\",\"fileName\":\"Screenshot 2024-09-13 111933.png\",\"fileType\":\"image/png\",\"fileSize\":71502,\"imageUrl\":\"blob:http://localhost:3001/c67d4588-6c9d-404e-9e5a-776793ae7e8f\"}",
+      "images": {}
+    },
+    {
+      "id": "9a0e",
+      "fileDetails": "{\"id\":\"1726577947660\",\"albumName\":\"Family Photos\",\"fileName\":\"Screenshot 2024-09-13 111933 - Copy.png\",\"fileType\":\"image/png\",\"fileSize\":71502,\"imageUrl\":\"blob:http://localhost:3001/61a70eca-d800-4187-9814-cd42c4c69b50\"}",
+      "images": {}
+    },
+    {
+      "id": "4f89",
+      "fileDetails": "{\"id\":\"1726577957908\",\"albumName\":\"Nature Shots\",\"fileName\":\"Screenshot 2024-09-13 111933.png\",\"fileType\":\"image/png\",\"fileSize\":71502,\"imageUrl\":\"blob:http://localhost:3001/73250594-3cdc-4018-b9b5-c2c4f6a55909\"}",
+      "images": {}
     }
   ],
   "albums": [
@@ -1387,19 +1404,27 @@
       "images": [
         {
           "id": "image1",
-          "imageUrl": "https://images.unsplash.com/photo-1506748686214e9df14f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZhY2F0aW9ufGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+          "imageUrl": "https://images.unsplash.com/photo-1726473124402-5033789859dc?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": "image2",
-          "imageUrl": "https://images.unsplash.com/photo-1506748686214e9df14f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZhY2F0aW9ufGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+          "imageUrl": "https://images.unsplash.com/photo-1726411307434-ecd8df8df87e?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": "image8",
-          "imageUrl": "https://images.unsplash.com/photo-1519648025401-8fbd71e2e8d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZhY2F0aW9ufGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+          "imageUrl": "https://images.unsplash.com/photo-1726332860804-590295047ab5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": "image9",
-          "imageUrl": "https://images.unsplash.com/photo-1506748686214e9df14f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZhY2F0aW9ufGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+          "imageUrl": "https://images.unsplash.com/photo-1718137265176-e983636a0703?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "2024-09-17T06:45:58.113Z",
+          "imageUrl": "blob:http://localhost:3001/05310ab9-4d40-44cb-8374-135aec1563a7"
+        },
+        {
+          "id": "2024-09-17T06:55:28.861Z",
+          "imageUrl": "blob:http://localhost:3001/2ace314a-0b61-4001-999b-56071a6cb41c"
         }
       ]
     },
@@ -1408,12 +1433,12 @@
       "albumName": "Work Projects",
       "images": [
         {
-          "id": "image3",
-          "imageUrl": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHdpdGglMjB2b3JrZWQgfGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+          "id": "2024-09-17T07:40:18.764Z",
+          "imageUrl": "blob:http://localhost:3001/6fed52bc-37be-4d01-807e-be87b4cfa268"
         },
         {
-          "id": "image4",
-          "imageUrl": "https://images.unsplash.com/photo-1560787121-2d2d0d20c1e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHdpdGglMjB2b3JrZWQgfGVufDB8fDE2NjUyNjEyMDY&ixlib=rb-1.2.1&q=80&w=1080"
+          "id": "2024-09-17T07:40:18.764Z",
+          "imageUrl": "blob:http://localhost:3001/d12640b2-9ce5-40e3-9cd7-8bd47c3490b0"
         }
       ]
     },
@@ -1428,6 +1453,10 @@
         {
           "id": "image6",
           "imageUrl": "https://images.unsplash.com/photo-1555685813-56d8f2ab8b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZhbWlseSBpbWFnZXxlbnwwfHx8MTY2NTI2MTM2Ng&ixlib=rb-1.2.1&q=80&w=1080"
+        },
+        {
+          "id": "2024-09-17T06:57:08.208Z",
+          "imageUrl": "blob:http://localhost:3001/a837a434-801a-4fcd-9fd2-9642265529f3"
         }
       ]
     },
@@ -1446,8 +1475,18 @@
       ]
     },
     {
-      "albumName": "Food Photography",
-      "id": "album5"
+      "id": "9f89",
+      "albumName": "askdnas",
+      "images": [
+        {
+          "id": "2024-09-17T12:16:43.264Z",
+          "imageUrl": "blob:http://localhost:3001/976d3ee7-eb73-4a49-9162-7acd53f91a93"
+        },
+        {
+          "id": "2024-09-17T12:16:43.265Z",
+          "imageUrl": "blob:http://localhost:3001/fe8cf2ef-200c-4ff2-be80-a0f7e3f096c7"
+        }
+      ]
     }
   ]
 }

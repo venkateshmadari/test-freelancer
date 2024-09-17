@@ -44,12 +44,8 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                 { title: "Contact Forms", href: '/leads/contactforms' },
             ]
         },
-        {
-            title: "Work", icon: Workflow, variant: "ghost", href: '#', id: 'work', hasDropdown: true, dropdownLinks: [
-                { title: "Work Image", href: '/work/workImages' },
-                { title: "Contact Forms", href: '/work/albums' },
-            ]
-        },
+        { title: "Work", icon: Workflow, variant: "ghost", href: '/work' },
+        { title: "Work", icon: Workflow, variant: "ghost", href: '/Images' },
     ];
 
     const pathName = usePathname();
