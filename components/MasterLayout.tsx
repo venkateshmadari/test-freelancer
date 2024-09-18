@@ -1,17 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { RefAttributes, useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
     Package2, Users, Bell, LayoutDashboard, Menu, Search, CircleUser,
-    ChevronDown, ChevronUp,
-    Coins,
-    NotepadText,
-    PersonStanding,
-    Workflow
+    ChevronDown, ChevronUp, Coins, NotepadText,
+    LucideProps,
+    Images,
+    GalleryHorizontalEnd,
+    Film
 } from "lucide-react";
-
 import {
     DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
@@ -20,34 +19,36 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion';
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+type LinkItem = {
+    title: string;
+    icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
+    variant: string;
+    href: string;
+    heading?: string;
+    hasDropdown?: boolean;
+    id?: string;
+    dropdownLinks?: Array<{
+        title: string;
+        href: string;
+    }>;
+};
 
-export const description =
-    "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
-
-export const iframeHeight = "800px";
-
-export const containerClassName = "w-full h-full";
+const links: LinkItem[] = [
+    { title: "Dashboard", icon: LayoutDashboard, variant: "ghost", href: '/' },
+    { title: "Pricing", icon: Coins, variant: "ghost", href: '/pricing', heading: 'Price' },
+    { title: "Request Forms", icon: NotepadText, variant: "ghost", href: '/leads/requestforms', heading: 'Leads' },
+    { title: "Contact Forms", icon: NotepadText, variant: "ghost", href: '/leads/contactforms' },
+    { title: "Gallery", icon: Images, variant: "ghost", href: '/gallery', heading: 'Works' },
+    { title: "Albums", icon: GalleryHorizontalEnd, variant: "ghost", href: '/albums' },
+    { title: "Videos", icon: Film, variant: "ghost", href: '/videos' },
+];
 
 export default function SideBar({ children }: { children: React.ReactNode }) {
     const { setTheme } = useTheme();
     const [openDropdowns, setOpenDropdowns] = useState<{ [key: string]: boolean }>({});
-
-    const links = [
-        { title: "Dashboard", icon: LayoutDashboard, variant: "default", href: '/' },
-        { title: "Pricing", icon: Coins, variant: "ghost", href: '/pricing' },
-        {
-            title: "Leads", icon: NotepadText, variant: "ghost", href: '#', id: 'leads', hasDropdown: true, dropdownLinks: [
-                { title: "Request Forms", href: '/leads/requestforms' },
-                { title: "Contact Forms", href: '/leads/contactforms' },
-            ]
-        },
-        { title: "Work", icon: Workflow, variant: "ghost", href: '/work' },
-        { title: "Work", icon: Workflow, variant: "ghost", href: '/Images' },
-    ];
-
     const pathName = usePathname();
 
     const toggleDropdown = (id: string) => {
@@ -64,7 +65,7 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                 <div className="flex items-center h-14 border-b px-4 lg:h-[60px] lg:px-6">
                     <Link href="/" className="flex items-center gap-2 font-semibold">
                         <Package2 className="h-6 w-6" />
-                        <span className="">ClickerShive</span>
+                        <span>ClickerShive</span>
                     </Link>
                     <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
                         <Bell className="h-4 w-4" />
@@ -77,6 +78,9 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                             const isActive = item.href === pathName;
                             return (
                                 <div key={index} className="relative mt-3">
+                                    <div className="mt-5 mb-3">
+                                        <span className="text-xs font-semibold text-black dark:text-gray-400 uppercase">{item?.heading}</span>
+                                    </div>
                                     <Link
                                         href={item.href}
                                         className={cn(
@@ -87,19 +91,17 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                         )}
                                         onClick={() => {
                                             if (item.hasDropdown) {
-                                                toggleDropdown(item.id);
+                                                toggleDropdown(item.id!);
                                             }
                                         }}
                                     >
                                         <item.icon className="h-4 w-4" />
-                                        {item?.title}
+                                        {item.title}
                                         {item.hasDropdown && (
-                                            openDropdowns[item.id] ?
-                                                <ChevronUp className="ml-auto h-4 w-4" /> :
-                                                <ChevronDown className="ml-auto h-4 w-4" />
+                                            openDropdowns[item.id!] ? <ChevronUp className="ml-auto h-4 w-4" /> : <ChevronDown className="ml-auto h-4 w-4" />
                                         )}
                                     </Link>
-                                    {item.hasDropdown && openDropdowns[item.id] && item.dropdownLinks && (
+                                    {item.hasDropdown && openDropdowns[item.id!] && item.dropdownLinks && (
                                         <motion.div
                                             initial={{ opacity: 0, height: 0 }}
                                             animate={{ opacity: 1, height: 'auto' }}
@@ -116,7 +118,6 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                                         "dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white",
                                                         "flex items-center justify-start gap-3 w-full"
                                                     )}
-                                                    style={{ marginBottom: dropdownIndex < item.dropdownLinks.length - 1 ? '5px' : '0' }}
                                                 >
                                                     {dropdownItem.title}
                                                 </Link>
@@ -135,21 +136,14 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                 <header className="flex items-center h-14 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="shrink-0 md:hidden"
-                            >
+                            <Button variant="outline" size="icon" className="shrink-0 md:hidden">
                                 <Menu className="h-5 w-5" />
                                 <span className="sr-only">Toggle navigation menu</span>
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="left" className="flex flex-col">
                             <nav className="grid gap-2 text-lg font-medium">
-                                <Link
-                                    href="#"
-                                    className="flex items-center gap-2 text-lg font-semibold"
-                                >
+                                <Link href="#" className="flex items-center gap-2 text-lg font-semibold">
                                     <Package2 className="h-6 w-6" />
                                     <span className="sr-only">Acme Inc</span>
                                 </Link>
@@ -167,19 +161,17 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                                 )}
                                                 onClick={() => {
                                                     if (item.hasDropdown) {
-                                                        toggleDropdown(item.id);
+                                                        toggleDropdown(item.id!);
                                                     }
                                                 }}
                                             >
                                                 <item.icon className="h-5 w-5" />
-                                                {item?.title}
+                                                {item.title}
                                                 {item.hasDropdown && (
-                                                    openDropdowns[item.id] ?
-                                                        <ChevronUp className="ml-auto h-5 w-5" /> :
-                                                        <ChevronDown className="ml-auto h-5 w-5" />
+                                                    openDropdowns[item.id!] ? <ChevronUp className="ml-auto h-5 w-5" /> : <ChevronDown className="ml-auto h-5 w-5" />
                                                 )}
                                             </Link>
-                                            {item.hasDropdown && openDropdowns[item.id] && item.dropdownLinks && (
+                                            {item.hasDropdown && openDropdowns[item.id!] && item.dropdownLinks && (
                                                 <motion.div
                                                     initial={{ opacity: 0, height: 0 }}
                                                     animate={{ opacity: 1, height: 'auto' }}
@@ -191,7 +183,6 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                                             key={dropdownIndex}
                                                             href={dropdownItem.href}
                                                             className="block text-sm text-muted-foreground hover:text-foreground mt-3"
-                                                            style={{ marginBottom: dropdownIndex < item.dropdownLinks.length - 1 ? '0.5rem' : '0' }}
                                                         >
                                                             {dropdownItem.title}
                                                         </Link>
@@ -225,15 +216,9 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
-                            <DropdownMenuItem onClick={() => setTheme("light")}>
-                                Light
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => setTheme("dark")}>
-                                Dark
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => setTheme("system")}>
-                                System
-                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
                     <DropdownMenu>

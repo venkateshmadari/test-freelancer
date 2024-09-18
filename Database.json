@@ -1353,140 +1353,126 @@
       "location": "Hitech City, Hyderabad"
     }
   ],
-  "workImages": [
+  "gallery": [
     {
-      "albumName": "Family Photos",
-      "id": "1726568824072"
+      "id": "d3c0",
+      "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+      "isFav": false
     },
     {
-      "id": "1726568824087",
-      "albumName": "Family Photos",
-      "imageUrl": "blob:http://localhost:3001/28c16ed3-8dea-47ab-9a21-c5bb903870b7"
+      "id": "2066",
+      "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+      "isFav": false
     },
     {
-      "id": "1726568824130",
-      "albumName": "Family Photos",
-      "imageUrl": "blob:http://localhost:3001/a5032c56-ed24-4bca-a6b4-3c2f05e8caf0"
+      "id": "8876",
+      "image": "blob:http://localhost:3001/3eea868b-62f9-4cb5-822a-972896152254",
+      "isFav": false
     },
     {
-      "id": "1726568824158",
-      "albumName": "Family Photos",
-      "imageUrl": "blob:http://localhost:3001/b399f194-0ad9-4f9f-a15e-b1a0682a0f02"
+      "id": "c0d2",
+      "image": "blob:http://localhost:3001/a3bc5d10-158d-490c-8be0-721c899de311",
+      "isFav": false
     },
     {
-      "albumName": "Family Photos",
-      "id": "1726574426210"
+      "id": "4b63",
+      "image": "blob:http://localhost:3001/5385d5cf-8b99-4559-92ad-a96aeb73231c",
+      "isFav": false
     },
     {
-      "albumName": "Family Photos",
-      "id": "1726575259101"
+      "id": "7235",
+      "image": "blob:http://localhost:3001/264df2f9-5954-48b9-832b-f587fab56845",
+      "isFav": false
     },
     {
-      "id": "b378",
-      "fileDetails": "{\"id\":\"1726577936666\",\"albumName\":\"Work Projects\",\"fileName\":\"Screenshot 2024-09-13 111933.png\",\"fileType\":\"image/png\",\"fileSize\":71502,\"imageUrl\":\"blob:http://localhost:3001/c67d4588-6c9d-404e-9e5a-776793ae7e8f\"}",
-      "images": {}
+      "id": "922d",
+      "image": "blob:http://localhost:3001/b904058c-3c5f-4ff7-8334-1df76216910d",
+      "isFav": false
     },
     {
-      "id": "9a0e",
-      "fileDetails": "{\"id\":\"1726577947660\",\"albumName\":\"Family Photos\",\"fileName\":\"Screenshot 2024-09-13 111933 - Copy.png\",\"fileType\":\"image/png\",\"fileSize\":71502,\"imageUrl\":\"blob:http://localhost:3001/61a70eca-d800-4187-9814-cd42c4c69b50\"}",
-      "images": {}
+      "id": "c569",
+      "image": "blob:http://localhost:3001/084a7edf-292e-4e14-9b92-376218a9b50e",
+      "isFav": false
     },
     {
-      "id": "4f89",
-      "fileDetails": "{\"id\":\"1726577957908\",\"albumName\":\"Nature Shots\",\"fileName\":\"Screenshot 2024-09-13 111933.png\",\"fileType\":\"image/png\",\"fileSize\":71502,\"imageUrl\":\"blob:http://localhost:3001/73250594-3cdc-4018-b9b5-c2c4f6a55909\"}",
-      "images": {}
+      "id": "1558",
+      "image": "blob:http://localhost:3001/ee14e9ff-f2cb-4ea6-9952-eda9d04d7e11",
+      "isFav": false
+    },
+    {
+      "id": "6437",
+      "image": "blob:http://localhost:3001/11c50b66-7e64-47bf-95a6-b9f3b621bb55",
+      "isFav": false
+    },
+    {
+      "id": "e658",
+      "image": "blob:http://localhost:3001/912e761a-4f54-4ee2-8b84-4f52b2931751",
+      "isFav": false
+    },
+    {
+      "id": "2cf9",
+      "image": "blob:http://localhost:3001/0eb4102d-29f3-4713-9051-247031aeea99",
+      "isFav": false
+    },
+    {
+      "id": "e6c0",
+      "image": "blob:http://localhost:3001/d78a6882-d681-46bb-8de5-f7ed593b84cf",
+      "isFav": false
+    },
+    {
+      "id": "0ddb",
+      "image": "blob:http://localhost:3001/246e3421-db8b-4c08-bc03-e89721829d3f",
+      "isFav": false
+    }
+  ],
+  "galleryFav": [
+    {
+      "id": "a516"
+    },
+    {
+      "0": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "id": "2d33"
     }
   ],
   "albums": [
     {
-      "id": "album1",
-      "albumName": "Vacation 2024",
-      "images": [
-        {
-          "id": "image1",
-          "imageUrl": "https://images.unsplash.com/photo-1726473124402-5033789859dc?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "id": "image2",
-          "imageUrl": "https://images.unsplash.com/photo-1726411307434-ecd8df8df87e?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "id": "image8",
-          "imageUrl": "https://images.unsplash.com/photo-1726332860804-590295047ab5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "id": "image9",
-          "imageUrl": "https://images.unsplash.com/photo-1718137265176-e983636a0703?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "id": "2024-09-17T06:45:58.113Z",
-          "imageUrl": "blob:http://localhost:3001/05310ab9-4d40-44cb-8374-135aec1563a7"
-        },
-        {
-          "id": "2024-09-17T06:55:28.861Z",
-          "imageUrl": "blob:http://localhost:3001/2ace314a-0b61-4001-999b-56071a6cb41c"
-        }
-      ]
+      "id": "6d86",
+      "title": "Photography",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/buvqoJL9DG0\" title=\"Scope of Graphic Designing - اردو / हिंदी [Eng Sub]\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-      "id": "album2",
-      "albumName": "Work Projects",
-      "images": [
-        {
-          "id": "2024-09-17T07:40:18.764Z",
-          "imageUrl": "blob:http://localhost:3001/6fed52bc-37be-4d01-807e-be87b4cfa268"
-        },
-        {
-          "id": "2024-09-17T07:40:18.764Z",
-          "imageUrl": "blob:http://localhost:3001/d12640b2-9ce5-40e3-9cd7-8bd47c3490b0"
-        }
-      ]
+      "id": "3bed",
+      "title": "Sheriyans Coding School",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/nFwNWvN_CRk\" title=\"🚀 Lenis - Learn What Matters | Smooth Scrolling in Web\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-      "id": "album3",
-      "albumName": "Family Photos",
-      "images": [
-        {
-          "id": "image5",
-          "imageUrl": "https://images.unsplash.com/photo-1555685813-56d8f2ab8b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZhbWlseSBpbWFnZXxlbnwwfHx8MTY2NTI2MTM2Ng&ixlib=rb-1.2.1&q=80&w=1080"
-        },
-        {
-          "id": "image6",
-          "imageUrl": "https://images.unsplash.com/photo-1555685813-56d8f2ab8b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZhbWlseSBpbWFnZXxlbnwwfHx8MTY2NTI2MTM2Ng&ixlib=rb-1.2.1&q=80&w=1080"
-        },
-        {
-          "id": "2024-09-17T06:57:08.208Z",
-          "imageUrl": "blob:http://localhost:3001/a837a434-801a-4fcd-9fd2-9642265529f3"
-        }
-      ]
+      "id": "d29d",
+      "title": "Videp - 3",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/6kE8lrqfwHo\" title=\"Master Async JavaScript: What it is and How to Use it\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-      "id": "album4",
-      "albumName": "Nature Shots",
-      "images": [
-        {
-          "id": "image7",
-          "imageUrl": "https://images.unsplash.com/photo-1473976347745-54653b8b7e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG5hdHVyZSBzaG90c3xlbnwwfHx8MTY2NTI2MTM2Ng&ixlib=rb-1.2.1&q=80&w=1080"
-        },
-        {
-          "id": "image8",
-          "imageUrl": "https://images.unsplash.com/photo-1473976347745-54653b8b7e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG5hdHVyZSBzaG90c3xlbnwwfHx8MTY2NTI2MTM2Ng&ixlib=rb-1.2.1&q=80&w=1080"
-        }
-      ]
+      "id": "4de2",
+      "title": "Videp - 4",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/zB5ILqJdYPw\" title=\"How Much HTML, CSS &amp; JavaScript Do You Need To Know For Web Development in 2024 | Hindi\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-      "id": "9f89",
-      "albumName": "askdnas",
-      "images": [
-        {
-          "id": "2024-09-17T12:16:43.264Z",
-          "imageUrl": "blob:http://localhost:3001/976d3ee7-eb73-4a49-9162-7acd53f91a93"
-        },
-        {
-          "id": "2024-09-17T12:16:43.265Z",
-          "imageUrl": "blob:http://localhost:3001/fe8cf2ef-200c-4ff2-be80-a0f7e3f096c7"
-        }
-      ]
+      "id": "b6a1",
+      "title": "Videp - 5",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/A7fF6czIxEo\" title=\"How Much HTML, CSS, &amp; JavaScript Is Enough? | Realistic Expectations\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+      "id": "dafd",
+      "title": "Videp - 6",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/i1FeOOhNnwU\" title=\"The Only CSS Layout Guide You&#39;ll Ever Need\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    }
+  ],
+  "albumsFav": [
+    {
+      "id": "a59a"
     }
   ]
 }

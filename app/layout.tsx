@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
+import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/ui/theme-provider"
 
 export const metadata: Metadata = {
@@ -27,6 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
