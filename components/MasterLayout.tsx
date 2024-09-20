@@ -4,12 +4,11 @@ import Link from "next/link";
 import { RefAttributes, useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
-    Package2, Users, Bell, LayoutDashboard, Menu, Search, CircleUser,
-    ChevronDown, ChevronUp, Coins, NotepadText,
-    LucideProps,
-    Images,
-    GalleryHorizontalEnd,
-    Film
+    Package2, Bell, LayoutDashboard, Menu, Search, CircleUser,
+    ChevronDown, ChevronUp, Coins, NotepadText, LucideProps,
+    Images, GalleryHorizontalEnd, Film, MessageSquareCode,
+    Settings,
+    UserRoundPen
 } from "lucide-react";
 import {
     DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger
@@ -30,10 +29,7 @@ type LinkItem = {
     heading?: string;
     hasDropdown?: boolean;
     id?: string;
-    dropdownLinks?: Array<{
-        title: string;
-        href: string;
-    }>;
+    dropdownLinks?: Array<{ title: string; href: string }>;
 };
 
 const links: LinkItem[] = [
@@ -44,6 +40,11 @@ const links: LinkItem[] = [
     { title: "Gallery", icon: Images, variant: "ghost", href: '/gallery', heading: 'Works' },
     { title: "Albums", icon: GalleryHorizontalEnd, variant: "ghost", href: '/albums' },
     { title: "Videos", icon: Film, variant: "ghost", href: '/videos' },
+    { title: "Reviews", icon: MessageSquareCode, variant: "ghost", href: '/reviews', heading: 'Reviews' },
+];
+
+const settingsLinks: LinkItem[] = [
+    { title: "Profile", icon: UserRoundPen, variant: "ghost", href: '/settings/profile' },
 ];
 
 export default function SideBar({ children }: { children: React.ReactNode }) {
@@ -58,14 +59,22 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
         }));
     };
 
+    const displayedLinks = pathName.includes('/settings') ? settingsLinks : links;
+
+    const displayTitles = pathName.includes('/settings') ? "Settings" : 'Clickershive';
+
     return (
         <div className="flex h-screen overflow-hidden">
             {/* Desktop Sidebar */}
             <div className="hidden md:flex flex-col w-[240px] bg-muted/40 border-r">
                 <div className="flex items-center h-14 border-b px-4 lg:h-[60px] lg:px-6">
                     <Link href="/" className="flex items-center gap-2 font-semibold">
-                        <Package2 className="h-6 w-6" />
-                        <span>ClickerShive</span>
+                        {pathName.includes('/settings') ? (
+                            <Settings className="h-6 w-6" />
+                        ) : (
+                            <Package2 className="h-6 w-6" />
+                        )}
+                        <span>{displayTitles}</span>
                     </Link>
                     <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
                         <Bell className="h-4 w-4" />
@@ -73,20 +82,20 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                     </Button>
                 </div>
                 <div className="flex-1 overflow-y-auto">
-                    <nav className="px-2 text-sm font-medium lg:px-4">
-                        {links.map((item, index) => {
+                    <nav className="px-2 text-sm font-medium lg:px-4 mt-5">
+                        {displayedLinks.map((item, index) => {
                             const isActive = item.href === pathName;
                             return (
                                 <div key={index} className="relative mt-3">
-                                    <div className="mt-5 mb-3">
-                                        <span className="text-xs font-semibold text-black dark:text-gray-400 uppercase">{item?.heading}</span>
-                                    </div>
+                                    {item.heading && (
+                                        <div className="mt-5 mb-3">
+                                            <span className="text-xs font-semibold text-black dark:text-gray-400 uppercase">{item.heading}</span>
+                                        </div>
+                                    )}
                                     <Link
                                         href={item.href}
                                         className={cn(
                                             buttonVariants({ variant: isActive ? 'default' : 'ghost', size: "sm" }),
-                                            item.variant === "default" &&
-                                            "dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white",
                                             "flex items-center justify-start gap-3 w-full"
                                         )}
                                         onClick={() => {
@@ -114,8 +123,6 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                                     href={dropdownItem.href}
                                                     className={cn(
                                                         buttonVariants({ variant: isActive ? 'default' : 'ghost', size: "sm" }),
-                                                        item.variant === "default" &&
-                                                        "dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white",
                                                         "flex items-center justify-start gap-3 w-full"
                                                     )}
                                                 >
@@ -145,9 +152,9 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                             <nav className="grid gap-2 text-lg font-medium">
                                 <Link href="#" className="flex items-center gap-2 text-lg font-semibold">
                                     <Package2 className="h-6 w-6" />
-                                    <span className="sr-only">Acme Inc</span>
+                                    <span className="sr-only">ClickerShive</span>
                                 </Link>
-                                {links.map((item, index) => {
+                                {displayedLinks.map((item, index) => {
                                     const isActive = item.href === pathName;
                                     return (
                                         <div key={index} className="relative">
@@ -155,8 +162,6 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                                                 href={item.href}
                                                 className={cn(
                                                     buttonVariants({ variant: isActive ? 'default' : 'ghost', size: "sm" }),
-                                                    item.variant === "default" &&
-                                                    "mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground",
                                                     "flex items-center justify-start gap-3 w-full mb-5"
                                                 )}
                                                 onClick={() => {
@@ -231,12 +236,23 @@ export default function SideBar({ children }: { children: React.ReactNode }) {
                         <DropdownMenuContent align="end">
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>Settings</DropdownMenuItem>
-                            <DropdownMenuItem>Support</DropdownMenuItem>
+                            <Link href={`/settings/profile`}>
+                                <DropdownMenuItem>
+                                    Settings
+                                </DropdownMenuItem>
+                            </Link>
+
+                            <Link href={'/support'}>
+                                <DropdownMenuItem>Support</DropdownMenuItem>
+                            </Link>
+
+
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>
-                                <Link href={`/auth/SignIn`}>Logout</Link>
-                            </DropdownMenuItem>
+                            <Link href={`/auth/SignIn`}>
+                                <DropdownMenuItem>
+                                    Logout
+                                </DropdownMenuItem>
+                            </Link>
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </header>

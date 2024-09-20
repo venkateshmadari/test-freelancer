@@ -19,47 +19,62 @@ import axiosInstance from '@/app/Instance';
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
-    title: z.string().min(1, { message: "Title is required." }),
-    video: z.string().min(1, { message: "Embedded code is required." }),
+    folder_name: z.string().min(1, { message: "Folder name is required." }),
 });
 
 interface AddVideoModalProps {
+    close: any;
     open: boolean;
     onOpenChange: (open: boolean) => void;
     fetchData: () => void;
 }
 
 type FormData = {
-    title: string;
-    video: string;
+    id: any;
+    folder_name: string;
+    images: [];
 };
 
-const AddVideo: React.FC<AddVideoModalProps> = ({ open, onOpenChange, fetchData }) => {
+const AddAlbum: React.FC<AddVideoModalProps> = ({ open, onOpenChange, fetchData, close }) => {
     const [loading, setLoading] = useState(false);
     const { toast } = useToast();
     const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
         resolver: zodResolver(formSchema),
     });
-
-
     const onSubmit: SubmitHandler<FormData> = async (data) => {
         setLoading(true);
         try {
-            const response = await axiosInstance.post('/albums', data);
+            const generateRandomId = () => {
+                return Math.floor(1000 + Math.random() * 9000).toString(); 
+            };
+
+            let updated = {
+                id: generateRandomId(),
+                folder_name: data.folder_name,
+                images: [],
+            };
+
+            const response = await axiosInstance.post('/folders', updated);
             if (response && response.data) {
+                const { folder_name, images } = response.data;
+
+                console.log('Response:', response.data);
+
                 fetchData();
                 reset();
+
                 toast({
-                    title: 'Video Added Successfully',
-                    description: `Video titled "${response.data.title}" added successfully!`,
+                    title: 'Folder Added Successfully',
+                    description: `Folder named "${folder_name}" added successfully!`,
                     variant: 'default',
                 });
                 setTimeout(() => onOpenChange(false), 2000);
+                close();
             }
         } catch (error) {
             console.error(error);
             toast({
-                title: 'Error adding video',
+                title: 'Error adding folder',
                 description: 'Something went wrong. Please try again.',
                 variant: 'destructive',
             });
@@ -69,40 +84,31 @@ const AddVideo: React.FC<AddVideoModalProps> = ({ open, onOpenChange, fetchData 
     };
 
 
+
+
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="sm:max-w-lg">
                 <DialogHeader>
-                    <DialogTitle>Add Video</DialogTitle>
+                    <DialogTitle>Add Folder</DialogTitle>
                     <DialogDescription>
-                        Fill in the form to add the video
+                        Fill in the form to add the folder
                     </DialogDescription>
                 </DialogHeader>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className='mb-5'>
-                        <Label htmlFor="title">Title</Label>
-                        <Input type="text"  {...register('title')} className='mt-5 mb-3' placeholder='Enter Your Title' />
-                        {errors.title && <span className='text-red-500 mt-5 text-sm'>{errors.title.message}</span>}
-                    </div>
-                    <div className='mb-5'>
-                        <Label htmlFor="video">Video Embedded Code</Label>
-                        <Input
-                            type="text"
-
-                            className='mt-3 mb-3'
-                            {...register('video')}
-                            placeholder="<iframe src='...' width='...' height='...' ></iframe>"
-                        />
-                        {errors.video && <span className='text-red-500 mt-5 text-sm'>{errors.video.message}</span>}
+                    <div className='mb-10'>
+                        <Label htmlFor="folder_name">Folder Name</Label>
+                        <Input type="text" {...register('folder_name')} className='mt-5 mb-3' placeholder='Enter Your Folder Name' />
+                        {errors.folder_name && <span className='text-red-500 mt-5 text-sm'>{errors.folder_name.message}</span>}
                     </div>
                     <div className='text-end'>
-                        <Button type="submit">Add Video</Button>
+                        <Button variant={'outline'} onClick={close} className='me-3'>Cancel</Button>
+                        <Button type="submit">Add Folder</Button>
                     </div>
-
                 </form>
             </DialogContent>
         </Dialog>
     );
 };
 
-export default AddVideo;
+export default AddAlbum;

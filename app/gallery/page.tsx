@@ -24,14 +24,15 @@ import {
     PaginationPrevious,
 } from "@/components/ui/pagination";
 import { Button } from "@/components/ui/button";
-import { Heart, Plus, Trash } from "lucide-react";
+import { FolderSymlink, Heart, Plus, Trash } from "lucide-react";
 import AddImageModal from "./components/Modals/AddModal";
 import axiosInstance from "../Instance";
 import Image from "next/image";
 import DeletModel from "./components/Modals/DeleteModal";
 import { useToast } from "@/hooks/use-toast";
 import No_Data from "../../img/not_found.png";
-import { Skeleton } from "@/components/ui/skeleton"; // Import Skeleton
+import { Skeleton } from "@/components/ui/skeleton";
+import MoveAlbum from "./components/Modals/MoveAlbum";
 
 interface Gallery {
     id: string;
@@ -45,13 +46,18 @@ const Gallery = () => {
     const [DeleteId, setDeleteId] = useState<string | null>(null);
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [galleryFav, setGalleryFav] = useState<Gallery[]>([]);
+    const [AlbumModal, setAlbumModal]= useState<boolean>(false);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [itemsPerPage] = useState<number>(5);
     const { toast } = useToast();
-    const [loading, setLoading] = useState<boolean>(true); 
+    const [loading, setLoading] = useState<boolean>(true);
+
+
+
+
 
     const GetImages = async () => {
-        setLoading(true); 
+        setLoading(true);
         try {
             const res = await axiosInstance.get("/gallery");
             if (res) {
@@ -61,7 +67,7 @@ const Gallery = () => {
             console.error(error);
             toast({ description: "Failed to load images." });
         } finally {
-            setLoading(false); 
+            setLoading(false);
         }
     };
 
@@ -80,7 +86,10 @@ const Gallery = () => {
                 setGalleryFav([...galleryFav, item]);
                 try {
                     await axiosInstance.post('/galleryFav', galleryFav);
-                    toast({ description: "Added to favorites." });
+                    toast({
+                        title: `${galleryFav.length + 1} / 6 Added`,
+                        description: 'Image Added To Favorites'
+                    });
                 } catch (error) {
                     console.log(error);
                     toast({ description: "Failed to update favorites." });
@@ -119,6 +128,10 @@ const Gallery = () => {
         setCurrentPage(page);
     };
 
+    const CloseMoveModal = () => {
+        setAlbumModal(false)
+    }
+
     return (
         <div>
             <Card>
@@ -143,10 +156,10 @@ const Gallery = () => {
                     <Table>
                         <TableHeader>
                             <TableRow>
-                                <TableHead>S.NO</TableHead>
-                                <TableHead>THUMBNAIL</TableHead>
-                                <TableHead>SELECT FAV ({galleryFav.length} / 6)</TableHead>
-                                <TableHead>ACTIONS</TableHead>
+                                <TableHead className="text-heading-dark dark:text-[#FACC15] font-bold">S.NO</TableHead>
+                                <TableHead className="text-heading-dark dark:text-[#FACC15] font-bold">THUMBNAIL</TableHead>
+                                <TableHead className="text-heading-dark dark:text-[#FACC15] font-bold">SELECT FAV ({galleryFav.length} / 6)</TableHead>
+                                <TableHead className="text-heading-dark dark:text-[#FACC15] font-bold text-end">ACTIONS</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -184,7 +197,7 @@ const Gallery = () => {
                                             <Image
                                                 src={item.image}
                                                 alt="Image Thumbnail"
-                                                width={80}
+                                                width={160}
                                                 height={80}
                                             />
                                         </TableCell>
@@ -198,7 +211,15 @@ const Gallery = () => {
                                                 <Heart className="h-4 w-4" />
                                             </Button>
                                         </TableCell>
-                                        <TableCell>
+                                        <TableCell className="text-end">
+                                            <Button
+                                                variant="outline"
+                                                size="icon"
+                                                className="me-3"
+                                                onClick={() => setAlbumModal(true)}
+                                            >
+                                                <FolderSymlink className="h-4 w-4" />
+                                            </Button>
                                             <Button
                                                 variant="outline"
                                                 size="icon"
@@ -258,6 +279,10 @@ const Gallery = () => {
                 onOpenChange={setAddModal}
                 fetchData={GetImages}
             />
+
+            {/* Move Image Modal */}
+
+            <MoveAlbum open={AlbumModal} onOpenChange={setAlbumModal} fetchData={GetImages} close={CloseMoveModal}/>
 
             {/* Delete Image Modal */}
             <DeletModel

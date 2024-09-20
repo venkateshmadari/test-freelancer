@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from '@/components/ui/button';
 import { Pencil } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -220,41 +220,41 @@ const ContactForms: React.FC = () => {
             </Table>
           )}
         </CardContent>
-      </Card>
-
-      <div className='mt-3'>
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem aria-disabled={currentPage === 1}>
-              <PaginationPrevious onClick={(e) => {
-                e.preventDefault();
-                if (currentPage > 1) handlePageChange(currentPage - 1);
-              }} aria-label="Previous Page" />
-            </PaginationItem>
-            {[...Array(totalPages)].map((_, index) => (
-              <PaginationItem key={index} aria-current={currentPage === index + 1 ? 'page' : undefined}>
-                <PaginationLink
+        <CardFooter>
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem aria-disabled={currentPage === 1}>
+                <PaginationPrevious onClick={(e) => {
+                  e.preventDefault();
+                  if (currentPage > 1) handlePageChange(currentPage - 1);
+                }} aria-label="Previous Page" />
+              </PaginationItem>
+              {[...Array(totalPages)].map((_, index) => (
+                <PaginationItem key={index} aria-current={currentPage === index + 1 ? 'page' : undefined}>
+                  <PaginationLink
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handlePageChange(index + 1);
+                    }}
+                  >
+                    {index + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              <PaginationItem aria-disabled={currentPage === totalPages}>
+                <PaginationNext
                   onClick={(e) => {
                     e.preventDefault();
-                    handlePageChange(index + 1);
+                    if (currentPage < totalPages) handlePageChange(currentPage + 1);
                   }}
-                >
-                  {index + 1}
-                </PaginationLink>
+                  aria-label="Next Page"
+                />
               </PaginationItem>
-            ))}
-            <PaginationItem aria-disabled={currentPage === totalPages}>
-              <PaginationNext
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (currentPage < totalPages) handlePageChange(currentPage + 1);
-                }}
-                aria-label="Next Page"
-              />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
-      </div>
+            </PaginationContent>
+          </Pagination>
+        </CardFooter>
+      </Card>
+
     </div>
   );
 }

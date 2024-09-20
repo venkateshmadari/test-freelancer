@@ -863,21 +863,9 @@
   ],
   "groups": [
     {
-      "id": "1",
-      "groupName": "Photography",
+      "groupName": "Photography - Updated",
       "status": 1,
-      "plans": [
-        {
-          "planId": 1,
-          "serviceName": "Wedding Photography",
-          "price": 600
-        },
-        {
-          "planId": 2,
-          "serviceName": "Portrait Session",
-          "price": 300
-        }
-      ]
+      "id": "1"
     },
     {
       "id": "2",
@@ -1405,11 +1393,6 @@
       "isFav": false
     },
     {
-      "id": "e658",
-      "image": "blob:http://localhost:3001/912e761a-4f54-4ee2-8b84-4f52b2931751",
-      "isFav": false
-    },
-    {
       "id": "2cf9",
       "image": "blob:http://localhost:3001/0eb4102d-29f3-4713-9051-247031aeea99",
       "isFav": false
@@ -1422,6 +1405,31 @@
     {
       "id": "0ddb",
       "image": "blob:http://localhost:3001/246e3421-db8b-4c08-bc03-e89721829d3f",
+      "isFav": false
+    },
+    {
+      "id": "1599",
+      "image": "blob:http://localhost:3001/ac457ceb-e956-40d2-817b-e8e81c21b688",
+      "isFav": false
+    },
+    {
+      "id": "5de4",
+      "image": "blob:http://localhost:3001/835a8eb7-77bb-4ca1-a814-333caf981015",
+      "isFav": false
+    },
+    {
+      "id": "7e55",
+      "image": "blob:http://localhost:3001/9ee6d1e9-08d8-484e-aa5d-f7c010519f13",
+      "isFav": false
+    },
+    {
+      "id": "7b9d",
+      "image": "blob:http://localhost:3001/a02e9e0e-9d22-4c84-9f2b-1f6a942cc3e5",
+      "isFav": false
+    },
+    {
+      "id": "b8af",
+      "image": "blob:http://localhost:3001/3076408d-0588-4c6d-a8ff-7f67751c97bc",
       "isFav": false
     }
   ],
@@ -1436,43 +1444,457 @@
         "isFav": false
       },
       "id": "2d33"
+    },
+    {
+      "id": "7af1"
+    },
+    {
+      "id": "3a38"
+    },
+    {
+      "id": "5b6e"
+    },
+    {
+      "id": "4c2b"
+    },
+    {
+      "id": "348d"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "id": "ad5c"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "1": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "id": "cd25"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "1": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "2": {
+        "id": "8876",
+        "image": "blob:http://localhost:3001/3eea868b-62f9-4cb5-822a-972896152254",
+        "isFav": false
+      },
+      "id": "ac9c"
+    },
+    {
+      "id": "0d86"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "id": "4762"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "1": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "id": "240f"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "1": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "2": {
+        "id": "8876",
+        "image": "blob:http://localhost:3001/3eea868b-62f9-4cb5-822a-972896152254",
+        "isFav": false
+      },
+      "id": "ab34"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "1": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "2": {
+        "id": "8876",
+        "image": "blob:http://localhost:3001/3eea868b-62f9-4cb5-822a-972896152254",
+        "isFav": false
+      },
+      "3": {
+        "id": "c0d2",
+        "image": "blob:http://localhost:3001/a3bc5d10-158d-490c-8be0-721c899de311",
+        "isFav": false
+      },
+      "id": "5ece"
+    },
+    {
+      "0": {
+        "id": "d3c0",
+        "image": "blob:http://localhost:3001/3137ada2-9548-4e87-abb4-6756135b4f8d",
+        "isFav": false
+      },
+      "1": {
+        "id": "2066",
+        "image": "blob:http://localhost:3001/80339692-de05-432f-87c8-aac25a2ec135",
+        "isFav": false
+      },
+      "2": {
+        "id": "8876",
+        "image": "blob:http://localhost:3001/3eea868b-62f9-4cb5-822a-972896152254",
+        "isFav": false
+      },
+      "3": {
+        "id": "c0d2",
+        "image": "blob:http://localhost:3001/a3bc5d10-158d-490c-8be0-721c899de311",
+        "isFav": false
+      },
+      "4": {
+        "id": "4b63",
+        "image": "blob:http://localhost:3001/5385d5cf-8b99-4559-92ad-a96aeb73231c",
+        "isFav": false
+      },
+      "id": "41e8"
+    },
+    {
+      "id": "2114"
+    },
+    {
+      "0": {
+        "id": "5de4",
+        "image": "blob:http://localhost:3001/835a8eb7-77bb-4ca1-a814-333caf981015",
+        "isFav": false
+      },
+      "id": "972e"
+    },
+    {
+      "0": {
+        "id": "5de4",
+        "image": "blob:http://localhost:3001/835a8eb7-77bb-4ca1-a814-333caf981015",
+        "isFav": false
+      },
+      "1": {
+        "id": "7e55",
+        "image": "blob:http://localhost:3001/9ee6d1e9-08d8-484e-aa5d-f7c010519f13",
+        "isFav": false
+      },
+      "id": "500b"
+    },
+    {
+      "0": {
+        "id": "5de4",
+        "image": "blob:http://localhost:3001/835a8eb7-77bb-4ca1-a814-333caf981015",
+        "isFav": false
+      },
+      "1": {
+        "id": "7e55",
+        "image": "blob:http://localhost:3001/9ee6d1e9-08d8-484e-aa5d-f7c010519f13",
+        "isFav": false
+      },
+      "2": {
+        "id": "7b9d",
+        "image": "blob:http://localhost:3001/a02e9e0e-9d22-4c84-9f2b-1f6a942cc3e5",
+        "isFav": false
+      },
+      "id": "4e6d"
+    },
+    {
+      "0": {
+        "id": "5de4",
+        "image": "blob:http://localhost:3001/835a8eb7-77bb-4ca1-a814-333caf981015",
+        "isFav": false
+      },
+      "1": {
+        "id": "7e55",
+        "image": "blob:http://localhost:3001/9ee6d1e9-08d8-484e-aa5d-f7c010519f13",
+        "isFav": false
+      },
+      "2": {
+        "id": "7b9d",
+        "image": "blob:http://localhost:3001/a02e9e0e-9d22-4c84-9f2b-1f6a942cc3e5",
+        "isFav": false
+      },
+      "3": {
+        "id": "b8af",
+        "image": "blob:http://localhost:3001/3076408d-0588-4c6d-a8ff-7f67751c97bc",
+        "isFav": false
+      },
+      "id": "24ac"
+    },
+    {
+      "0": {
+        "id": "5de4",
+        "image": "blob:http://localhost:3001/835a8eb7-77bb-4ca1-a814-333caf981015",
+        "isFav": false
+      },
+      "1": {
+        "id": "7e55",
+        "image": "blob:http://localhost:3001/9ee6d1e9-08d8-484e-aa5d-f7c010519f13",
+        "isFav": false
+      },
+      "2": {
+        "id": "7b9d",
+        "image": "blob:http://localhost:3001/a02e9e0e-9d22-4c84-9f2b-1f6a942cc3e5",
+        "isFav": false
+      },
+      "3": {
+        "id": "b8af",
+        "image": "blob:http://localhost:3001/3076408d-0588-4c6d-a8ff-7f67751c97bc",
+        "isFav": false
+      },
+      "4": {
+        "id": "1599",
+        "image": "blob:http://localhost:3001/ac457ceb-e956-40d2-817b-e8e81c21b688",
+        "isFav": false
+      },
+      "id": "8baa"
+    },
+    {
+      "id": "9776"
+    },
+    {
+      "id": "08e9"
+    },
+    {
+      "id": "bc10"
     }
   ],
   "albums": [
     {
-      "id": "6d86",
-      "title": "Photography",
-      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/buvqoJL9DG0\" title=\"Scope of Graphic Designing - اردو / हिंदी [Eng Sub]\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      "id": "d12a",
+      "title": "video - ` upadted",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/T55Kb8rrH1g?list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH\" title=\"All Fundamentals of JavaScript | Part 1 - Backend Development\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-      "id": "3bed",
-      "title": "Sheriyans Coding School",
-      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/nFwNWvN_CRk\" title=\"🚀 Lenis - Learn What Matters | Smooth Scrolling in Web\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      "id": "a113",
+      "title": "photography",
+      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/hVuTuib65WM\" title=\"80% Of Photography Basics In Just 10 Minutes\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-      "id": "d29d",
-      "title": "Videp - 3",
-      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/6kE8lrqfwHo\" title=\"Master Async JavaScript: What it is and How to Use it\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-    },
-    {
-      "id": "4de2",
-      "title": "Videp - 4",
-      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/zB5ILqJdYPw\" title=\"How Much HTML, CSS &amp; JavaScript Do You Need To Know For Web Development in 2024 | Hindi\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-    },
-    {
-      "id": "b6a1",
-      "title": "Videp - 5",
-      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/A7fF6czIxEo\" title=\"How Much HTML, CSS, &amp; JavaScript Is Enough? | Realistic Expectations\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-    },
-    {
-      "id": "dafd",
-      "title": "Videp - 6",
-      "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/i1FeOOhNnwU\" title=\"The Only CSS Layout Guide You&#39;ll Ever Need\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      "id": "94cc",
+      "title": "Hey"
     }
   ],
   "albumsFav": [
     {
       "id": "a59a"
+    },
+    {
+      "id": "f2f3"
+    },
+    {
+      "0": {
+        "id": "6d86",
+        "title": "Photography",
+        "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/buvqoJL9DG0\" title=\"Scope of Graphic Designing - اردو / हिंदी [Eng Sub]\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "id": "9603"
+    },
+    {
+      "id": "c802"
+    },
+    {
+      "id": "53f7"
+    },
+    {
+      "0": {
+        "id": "d12a",
+        "title": "video - ` upadted",
+        "video": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/T55Kb8rrH1g?list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH\" title=\"All Fundamentals of JavaScript | Part 1 - Backend Development\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "id": "fb24"
+    },
+    {
+      "id": "0efc"
+    },
+    {
+      "id": "6a2f"
+    }
+  ],
+  "folders": [
+    {
+      "id": "3093",
+      "folder_name": "General",
+      "images": [
+        {
+          "id": "Screenshot 2024-09-13 112003.png",
+          "name": "Screenshot 2024-09-13 112003.png",
+          "url": "blob:http://localhost:3001/9f9272eb-dfdd-443b-b2c5-f73574112ce7"
+        },
+        {
+          "id": "Screenshot 2024-09-13 111933 - Copy.png",
+          "name": "Screenshot 2024-09-13 111933 - Copy.png",
+          "url": "blob:http://localhost:3001/3aa80dd0-9375-43da-886f-89201db908c0"
+        },
+        {
+          "id": "Screenshot 2024-09-13 111933.png",
+          "name": "Screenshot 2024-09-13 111933.png",
+          "url": "blob:http://localhost:3001/1ed8d0ca-29c0-4f6a-9a63-9b2476ceb669"
+        },
+        {
+          "id": "Screenshot 2024-09-12 121022 - Copy.png",
+          "name": "Screenshot 2024-09-12 121022 - Copy.png",
+          "url": "blob:http://localhost:3001/ae069684-340f-4279-b27e-a663eeeae507"
+        },
+        {
+          "id": "Screenshot 2024-09-12 121022.png",
+          "name": "Screenshot 2024-09-12 121022.png",
+          "url": "blob:http://localhost:3001/8845ebd7-ab5c-4dc8-8531-fc9df2bbe304"
+        }
+      ]
+    },
+    {
+      "id": "5181",
+      "folder_name": "Demo_`1",
+      "images": []
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "user": "Rajesh Kumar",
+      "rating": 5,
+      "comment": "Outstanding service and very helpful staff!",
+      "date": "2023-08-15",
+      "qualityservices": 5,
+      "facilities": 5,
+      "flexibility": 5,
+      "valueformoney": 5
+    },
+    {
+      "id": 2,
+      "user": "Neeta Sharma",
+      "rating": 4,
+      "comment": "Very good experience, will recommend!",
+      "date": "2023-09-02",
+      "qualityservices": 4,
+      "facilities": 4,
+      "flexibility": 4,
+      "valueformoney": 4
+    },
+    {
+      "id": 3,
+      "user": "Arjun Patel",
+      "rating": 3,
+      "comment": "Average experience, room for improvement.",
+      "date": "2023-09-10",
+      "qualityservices": 3,
+      "facilities": 3,
+      "flexibility": 3,
+      "valueformoney": 3
+    },
+    {
+      "id": 4,
+      "user": "Sita Verma",
+      "rating": 4,
+      "comment": "Had a pleasant stay, would come back.",
+      "date": "2023-09-15",
+      "qualityservices": 4,
+      "facilities": 4,
+      "flexibility": 4,
+      "valueformoney": 4
+    },
+    {
+      "id": 5,
+      "user": "Ravi Singh",
+      "rating": 2,
+      "comment": "Not satisfied with the services.",
+      "date": "2023-09-20",
+      "qualityservices": 2,
+      "facilities": 2,
+      "flexibility": 3,
+      "valueformoney": 2
+    },
+    {
+      "id": 6,
+      "user": "Pooja Gupta",
+      "rating": 5,
+      "comment": "Fantastic experience overall!",
+      "date": "2023-09-25",
+      "qualityservices": 5,
+      "facilities": 5,
+      "flexibility": 5,
+      "valueformoney": 5
+    },
+    {
+      "id": 7,
+      "user": "Vikram Joshi",
+      "rating": 4,
+      "comment": "Great value for money.",
+      "date": "2023-09-30",
+      "qualityservices": 4,
+      "facilities": 4,
+      "flexibility": 4,
+      "valueformoney": 4
+    },
+    {
+      "id": 8,
+      "user": "Anita Rao",
+      "rating": 3,
+      "comment": "Decent stay, but could be better.",
+      "date": "2023-10-05",
+      "qualityservices": 3,
+      "facilities": 3,
+      "flexibility": 3,
+      "valueformoney": 3
+    },
+    {
+      "id": 9,
+      "user": "Manoj Nair",
+      "rating": 5,
+      "comment": "Truly exceptional experience!",
+      "date": "2023-10-10",
+      "qualityservices": 5,
+      "facilities": 5,
+      "flexibility": 5,
+      "valueformoney": 5
+    },
+    {
+      "id": 10,
+      "user": "Sunita Mehta",
+      "rating": 4,
+      "comment": "Overall a great experience, would visit again.",
+      "date": "2023-10-15",
+      "qualityservices": 4,
+      "facilities": 4,
+      "flexibility": 4,
+      "valueformoney": 4
     }
   ]
 }

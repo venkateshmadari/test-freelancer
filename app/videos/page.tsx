@@ -4,6 +4,7 @@ import {
     Card,
     CardContent,
     CardDescription,
+    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
@@ -46,9 +47,11 @@ const Videos = () => {
     const [addModal, setAddModal] = useState<boolean>(false);
     const [editModal, setEditModal] = useState<boolean>(false);
     const [DeleteModal, setDeleteModal] = useState<boolean>(false);
+    const [videoId, setVideoId] = useState<any>("");
     const [DeleteId, setDeleteId] = useState<string | null>(null);
     const [VideoFav, setVideoFav] = useState<Videos[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const [title, setTitle] = useState<any>("");
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [itemsPerPage] = useState<number>(5);
     const { toast } = useToast();
@@ -204,7 +207,7 @@ const Videos = () => {
                             </TableHeader>
                             <TableBody>
                                 {currentVideos.map((item, index) => {
-                                    const video = item.video.replace(
+                                    const video = item?.video?.replace(
                                         '<iframe width="1280" height="720"',
                                         '<iframe width="250" height="120"'
                                     );
@@ -233,7 +236,10 @@ const Videos = () => {
                                                 </Button>
                                             </TableCell>
                                             <TableCell className="text-end">
-                                                <Button variant="outline" size="icon" className="me-3" onClick={() => setEditModal(true)}>
+                                                <Button variant="outline" size="icon" className="me-3" onClick={() => {
+                                                    setEditModal(true);
+                                                    setVideoId(item?.id);
+                                                }}>
                                                     <Pencil className="h-4 w-4" />
                                                 </Button>
                                                 <Button variant="outline" size="icon" className="me-3" onClick={() => {
@@ -250,54 +256,54 @@ const Videos = () => {
                         </Table>
                     )}
                 </CardContent>
-            </Card>
-
-            <div className="mt-3">
-                <Pagination>
-                    <PaginationContent>
-                        <PaginationItem aria-disabled={currentPage === 1}>
-                            <PaginationPrevious
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    if (currentPage > 1) handlePageChange(currentPage - 1);
-                                }}
-                                aria-label="Previous Page"
-                            />
-                        </PaginationItem>
-                        {[...Array(totalPages)].map((_, index) => (
-                            <PaginationItem
-                                key={index}
-                                aria-current={currentPage === index + 1 ? "page" : undefined}
-                            >
-                                <PaginationLink
+                <CardFooter>
+                    <Pagination>
+                        <PaginationContent>
+                            <PaginationItem aria-disabled={currentPage === 1}>
+                                <PaginationPrevious
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        handlePageChange(index + 1);
+                                        if (currentPage > 1) handlePageChange(currentPage - 1);
                                     }}
-                                >
-                                    {index + 1}
-                                </PaginationLink>
+                                    aria-label="Previous Page"
+                                />
                             </PaginationItem>
-                        ))}
-                        <PaginationItem aria-disabled={currentPage === totalPages}>
-                            <PaginationNext
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    if (currentPage < totalPages)
-                                        handlePageChange(currentPage + 1);
-                                }}
-                                aria-label="Next Page"
-                            />
-                        </PaginationItem>
-                    </PaginationContent>
-                </Pagination>
-            </div>
+                            {[...Array(totalPages)].map((_, index) => (
+                                <PaginationItem
+                                    key={index}
+                                    aria-current={currentPage === index + 1 ? "page" : undefined}
+                                >
+                                    <PaginationLink
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handlePageChange(index + 1);
+                                        }}
+                                    >
+                                        {index + 1}
+                                    </PaginationLink>
+                                </PaginationItem>
+                            ))}
+                            <PaginationItem aria-disabled={currentPage === totalPages}>
+                                <PaginationNext
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (currentPage < totalPages)
+                                            handlePageChange(currentPage + 1);
+                                    }}
+                                    aria-label="Next Page"
+                                />
+                            </PaginationItem>
+                        </PaginationContent>
+                    </Pagination>
+                </CardFooter>
+            </Card>
+
 
             <AddVideo open={addModal} onOpenChange={setAddModal} fetchData={getVideos} />
 
             <DeletModel open={DeleteModal} onOpenChange={setDeleteModal} onConfirm={DeleteHandler} text={'Video'} DeleteText={'Delete Video'} />
 
-            <EditVideo open={editModal} onOpenChange={setEditModal} fetchData={getVideos} />
+            <EditVideo open={editModal} onOpenChange={setEditModal} fetchData={getVideos} videoId={videoId} />
         </div>
     );
 };

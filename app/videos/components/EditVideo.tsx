@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Dialog,
     DialogContent,
@@ -20,39 +20,57 @@ import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
     title: z.string().min(1, { message: "Title is required." }),
-    video: z.string().optional(), 
+    video: z.string().optional(),
 });
 
 interface EditVideoProps {
     open: boolean;
     onOpenChange: (open: boolean) => void;
     fetchData: () => void;
+    videoId: any;
 }
 
 type FormData = {
     title: string;
-    video?: string; 
+    video?: string;
 };
 
-const EditVideo: React.FC<EditVideoProps> = ({ open, onOpenChange, fetchData }) => {
+const EditVideo: React.FC<EditVideoProps> = ({ open, onOpenChange, fetchData, videoId }) => {
     const { toast } = useToast();
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
         resolver: zodResolver(formSchema),
     });
 
+    const GetVideoId = async () => {
+        try {
+            const res = await axiosInstance.get(`/albums/${videoId}`);
+            if (res && res.data) {
+                reset({
+                    title: res.data.title,
+                    video: res.data.video,
+                });
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        if (videoId) {
+            GetVideoId();
+        }
+    }, [videoId]);
+
     const onSubmit: SubmitHandler<FormData> = async (data) => {
         try {
-            const response = await axiosInstance.patch(`/albums/${data.title}`, { title: data.title }); 
+            const response = await axiosInstance.patch(`/albums/${videoId}`, { title: data.title });
             fetchData();
-            console.log(response.data);
             toast({
                 title: 'Video Title Updated Successfully',
                 description: `Video titled "${response.data.title}" updated successfully!`,
                 variant: 'default',
             });
-
             onOpenChange(false);
-
         } catch (error) {
             console.error(error);
             toast({
@@ -86,11 +104,13 @@ const EditVideo: React.FC<EditVideoProps> = ({ open, onOpenChange, fetchData }) 
                             className='mt-3'
                             {...register('video')}
                             placeholder="<iframe src='...' width='...' height='...' ></iframe>"
-                            disabled 
+                            disabled
                         />
                         {errors.video && <span>{errors.video.message}</span>}
                     </div>
-                    <Button type="submit">Update</Button>
+                    <div className='text-end'>
+                        <Button type="submit">Update</Button>
+                    </div>
                 </form>
             </DialogContent>
         </Dialog>
