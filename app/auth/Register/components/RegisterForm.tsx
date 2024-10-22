@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Loader, Eye, EyeOff } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useToast } from "@/components/ui/use-toast"
+// import { useToast } from "@/components/ui/use-toast"
 import {
     Select,
     SelectContent,
@@ -31,7 +31,7 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
     const [confirmPassword, setConfirmPassword] = useState<string>("")
     const [selectedType, setSelectedType] = useState<string>("") 
     const [error, setError] = useState<string | null>(null)
-    const { toast } = useToast()
+    // const { toast } = useToast()
     const router = useRouter()
 
     async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -55,17 +55,17 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
 
         try {
             console.log("Form Data:", formData)
-            toast({
-                description: "Account Created Successfully",
-                variant: "default",
-            })
+            // toast({
+            //     description: "Account Created Successfully",
+            //     variant: "default",
+            // })
             router.push('/auth/SignIn')
         } catch (error) {
             console.error("Submission error", error)
-            toast({
-                description: "Something went wrong. Please try again.",
-                variant: "destructive",
-            })
+            // toast({
+            //     description: "Something went wrong. Please try again.",
+            //     variant: "destructive",
+            // })
         } finally {
             setIsLoading(false)
         }

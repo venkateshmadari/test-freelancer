@@ -46,15 +46,11 @@ const Gallery = () => {
     const [DeleteId, setDeleteId] = useState<string | null>(null);
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [galleryFav, setGalleryFav] = useState<Gallery[]>([]);
-    const [AlbumModal, setAlbumModal]= useState<boolean>(false);
+    const [AlbumModal, setAlbumModal] = useState<boolean>(false);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [itemsPerPage] = useState<number>(5);
     const { toast } = useToast();
     const [loading, setLoading] = useState<boolean>(true);
-
-
-
-
 
     const GetImages = async () => {
         setLoading(true);
@@ -85,7 +81,7 @@ const Gallery = () => {
             if (galleryFav.length < 6) {
                 setGalleryFav([...galleryFav, item]);
                 try {
-                    await axiosInstance.post('/galleryFav', galleryFav);
+                    await axiosInstance.post('/galleryFav', [...galleryFav, item]);
                     toast({
                         title: `${galleryFav.length + 1} / 6 Added`,
                         description: 'Image Added To Favorites'
@@ -129,7 +125,7 @@ const Gallery = () => {
     };
 
     const CloseMoveModal = () => {
-        setAlbumModal(false)
+        setAlbumModal(false);
     }
 
     return (
@@ -272,9 +268,8 @@ const Gallery = () => {
                     </div>
                 </CardContent>
             </Card>
-
-            {/* Add Image Modal */}
-            <AddImageModal
+      {/* Add Image Modal */}
+      <AddImageModal
                 open={AddModal}
                 onOpenChange={setAddModal}
                 fetchData={GetImages}

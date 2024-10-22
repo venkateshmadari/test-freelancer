@@ -1,7 +1,6 @@
-// AddImageModal.tsx
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Dialog,
     DialogContent,
@@ -21,7 +20,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
     picture: z
-        .instanceof(FileList)
+        .any()
         .refine(files => files.length > 0, {
             message: "At least one file is required.",
         }),
@@ -30,7 +29,7 @@ const formSchema = z.object({
 interface AddImageModalProps {
     open: boolean;
     onOpenChange: (open: boolean) => void;
-    fetchData: any
+    fetchData: any;
 }
 
 interface ImageData {
@@ -47,10 +46,16 @@ const AddImageModal: React.FC<AddImageModalProps> = ({ open, onOpenChange, fetch
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
         resolver: zodResolver(formSchema),
     });
+
     const onSubmit: SubmitHandler<FormData> = async (data) => {
-        const fileCount = data.picture.length;
-        for (let i = 0; i < fileCount; i++) {
-            const file = data.picture[i];
+        const files = data.picture;
+
+        if (!files || files.length === 0) {
+            toast({ description: "No files selected." });
+            return;
+        }
+
+        const promises = Array.from(files).map(async (file) => {
             const imageUrl = URL.createObjectURL(file);
 
             const imageData: ImageData = {
@@ -58,18 +63,19 @@ const AddImageModal: React.FC<AddImageModalProps> = ({ open, onOpenChange, fetch
                 isFav: false,
             };
             try {
-                await axiosInstance.post('/gallery', imageData)
+                await axiosInstance.post('/gallery', imageData);
                 fetchData();
                 toast({
-                    title: 'Image Added SuccessFully',
+                    title: 'Image Added Successfully',
                     variant: 'default',
-                })
-
+                });
             } catch (error) {
-                console.log(error)
+                console.log(error);
+                toast({ description: "Failed to upload image.", variant: 'destructive' });
             }
+        });
 
-        }
+        await Promise.all(promises);
         onOpenChange(false);
     };
 
